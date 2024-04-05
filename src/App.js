@@ -1,24 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import { Home } from './Pages/Home';
 
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { MainNav } from './Components/MainNav';
+import { TextToText } from './Pages/TextToText';
+import { TextToAudio } from './Pages/TextToAudio';
+import { AudioToText } from './Pages/AudioToText';
+import { AudioToAudio } from './Pages/AudioToAudio';
+import Login from './Pages/Login';
+import { Toaster } from 'react-hot-toast';
+import { useUserStore } from './store/user-store';
+import AuthProvider from './Components/AuthProvider';
+import { Nav } from './Components/Nav';
+import "./mediaqueries.css"
+import { MobieMainNav } from './Components/MobieMainNav';
+import { About } from './Pages/About';
+import { Service } from './Pages/Service';
+import { Contact } from './Pages/Contact';
 function App() {
+  const location = useLocation();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <MainNav />
+      <MobieMainNav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/service' element={<Service />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+      <AuthProvider>
+        {location.pathname.startsWith("/user/") && <Nav />}
+        <>
+          <Routes>
+            <Route path='/user/text-to-text' element={<TextToText />} />
+            <Route path='/user/text-to-voice' element={<TextToAudio />} />
+            <Route path='/user/voice-to-text' element={<AudioToText />} />
+            <Route path='/user/audio-to-audio' element={<AudioToAudio />} />
+          </Routes>
+        </>
+      </AuthProvider>
+      <Toaster position="top-center" />
+    </div >
   );
 }
 
