@@ -132,7 +132,7 @@ function Signup({ isOpen, onClose }) {
                     </div>
                     <button type='submit' className='home-start login-btn'>Sign Up</button>
                 </form>
-                <p>Already have an account? <a href="/login">Login</a></p>
+                <p>Already have an account? <a href="/">Login</a></p>
             </div>
         </div>
     );

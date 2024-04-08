@@ -46,7 +46,7 @@ function Login({ isOpen, onClose }) {
                     </div>
                     <button type='submit' className='home-start login-btn'>Login</button>
                 </form>
-                <p>Don't have any account? <a href="/signup">Sign-up</a></p>
+                <p>Don't have any account? <a href="/">Sign-up</a></p>
             </div>
         </div>
     );
