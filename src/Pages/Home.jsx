@@ -36,7 +36,7 @@ export const Home = () => {
                             >Get Started</button>
                         </div>
                     ) : (
-                        <>
+                        <div>
                             <div className="login-signup">
                                 <button className="login" onClick={() => {
                                     setSignupPopupOpen(false)
@@ -55,7 +55,7 @@ export const Home = () => {
                                 setSignupPopupOpen(false)
                             }} />
 
-                        </>
+                        </div>
                     )
                     }
                 </div>

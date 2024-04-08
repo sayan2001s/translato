@@ -387,7 +387,6 @@ textarea {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
 }
 
 .login-content {

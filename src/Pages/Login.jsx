@@ -1,6 +1,4 @@
-import axios from 'axios';
 import React, { useState } from 'react';
-import toast from 'react-hot-toast';
 import processLogin from '../store/utility';
 function Login({ isOpen, onClose }) {
     const [email, setEmail] = useState();
@@ -48,7 +46,7 @@ function Login({ isOpen, onClose }) {
                     </div>
                     <button type='submit' className='home-start login-btn'>Login</button>
                 </form>
-                <p>Don't have any account? <button>Sign-up</button></p>
+                <p>Don't have any account? <a href="/signup">Sign-up</a></p>
             </div>
         </div>
     );
