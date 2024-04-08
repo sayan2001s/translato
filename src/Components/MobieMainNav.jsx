@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { CloseIcon, LogoutLogo, TranslatorLogo, UserLogo } from '../Image'
+import { Link, useNavigate } from 'react-router-dom'
+import { CloseIcon, TranslatorLogo } from '../Image'
 import { useUserStore } from '../store/user-store'
 import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
@@ -14,7 +14,6 @@ export const MobieMainNav = () => {
     const [isSignupPopupOpen, setSignupPopupOpen] = useState(false);
     const [isUserPopupOpen, setUserPopupOpen] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation()
 
     const [isMenuOpen, setMenuOpen] = useState(false)
 

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import Login from './Login';
 import processLogin from '../store/utility';
 import { validateEmail, validateName, validatePassword } from '../utilities/Validate';
 

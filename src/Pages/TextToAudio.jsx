@@ -2,7 +2,6 @@ import React from 'react'
 import { languages } from '../Components'
 import { useState } from 'react'
 import axios from 'axios'
-import { Nav } from '../Components/Nav'
 import toast from 'react-hot-toast'
 import { DownloadLogo, RetryLogo } from '../Image'
 
@@ -112,7 +111,7 @@ export const TextToAudio = () => {
                                         <a href={final_text} download={"audio.wav"}><img src={DownloadLogo} alt="" /></a>
                                     </div>
                                     <div className="retry">
-                                        <a onClick={translate}><img src={RetryLogo} alt="" /></a>
+                                        <button onClick={translate}><img src={RetryLogo} alt="" /></button>
                                     </div>
                                 </div>
                             </div>

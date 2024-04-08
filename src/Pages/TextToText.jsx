@@ -1,8 +1,7 @@
 import React from 'react'
 import { languages } from '../Components'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
-import { Nav } from '../Components/Nav'
 import toast from 'react-hot-toast'
 
 export const TextToText = () => {
