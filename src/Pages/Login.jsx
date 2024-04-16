@@ -18,8 +18,10 @@ function Login({ isOpen, onClose }) {
     }
 
     return (
-        <div className="login-popup">
-            <div className="login-content">
+        <div className="login-popup" onClick={onClose}>
+            <div className="login-content" onClick={(event) => {
+                event.stopPropagation()
+            }}>
                 <h2>Login</h2>
                 <button className="close-btn" onClick={onClose}>X</button>
                 <form onSubmit={handleSubmit}>

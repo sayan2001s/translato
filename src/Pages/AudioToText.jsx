@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 
 
 export const AudioToText = () => {
-    const url = process.env.REACT_APP_API_URL
+    const url = process.env.REACT_APP_FASTAPI_URL
     const [initial_lang, setInitial_lang] = useState("bn")
     const [final_lang, setFinal_lang] = useState("en")
     const [final_text, setFinal_text] = useState("")

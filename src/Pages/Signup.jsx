@@ -84,8 +84,11 @@ function Signup({ isOpen, onClose }) {
     }
 
     return (
-        <div className="login-popup">
-            <div className="login-content signup-popup">
+        <div className="login-popup" onClick={onClose}>
+            <div className="login-content signup-popup"
+                onClick={(e) => {
+                    e.stopPropagation()
+                }}>
                 <h2>Sign Up</h2>
                 <button className="close-btn" onClick={onClose}>X</button>
                 <form onSubmit={handleSubmit}>
