@@ -11,9 +11,8 @@ function Signup({ isOpen, onClose }) {
     const [confirmPassword, setConfirmPassword] = useState('');
 
     const processSignup = async () => {
+        const url = "https://sayan-translator-backend.onrender.com"
         toast.loading('Signing up...');
-        const url = "http://localhost:6969";
-        console.log(url);
         if (name === '' || email === '' || password === '') {
             toast.error('Name, email and password are required');
             return;

@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 const processLogin = async (email, password) => {
     toast.loading('Logging in...');
-    const url = "http://localhost:6969";
+    const url = "https://sayan-translator-backend.onrender.com";
     if (email === '' || password === '') {
         toast.dismiss();
         toast.error('Email and password are required');

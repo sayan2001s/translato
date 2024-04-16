@@ -635,3 +635,8 @@ audio {
 .mobile-only {
   display: none;
 }
+
+.close-btn img {
+  width: 30px;
+  height: 30px;
+}
