@@ -2,12 +2,11 @@ import React from 'react'
 import { languages } from '../Components'
 import { useState } from 'react'
 import axios from 'axios'
-import { Nav } from '../Components/Nav'
 import toast from 'react-hot-toast'
 
 
 export const AudioToText = () => {
-    const url = "http://127.0.0.1:8000"
+    const url = process.env.REACT_APP_API_URL
     const [initial_lang, setInitial_lang] = useState("bn")
     const [final_lang, setFinal_lang] = useState("en")
     const [final_text, setFinal_text] = useState("")

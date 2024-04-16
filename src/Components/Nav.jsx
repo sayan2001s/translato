@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { nav_items } from '.'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 export const Nav = () => {
     return (
         <div className="navbar">

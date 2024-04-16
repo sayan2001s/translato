@@ -3,14 +3,13 @@ import toast from "react-hot-toast";
 
 const processLogin = async (email, password) => {
     toast.loading('Logging in...');
-    const url = "https://sayan-translator-backend.onrender.com";
     if (email === '' || password === '') {
         toast.dismiss();
         toast.error('Email and password are required');
         return 0;
     }
     try {
-        const { data } = await axios.post(url + '/auth/users/login',
+        const { data } = await axios.post(process.env.REACT_APP_BACKEND_URL + '/auth/users/login',
             {
                 email,
                 password,

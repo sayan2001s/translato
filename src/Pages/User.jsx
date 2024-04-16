@@ -30,7 +30,7 @@ function User({ isOpen, onClose }) {
                 'Content-Type': 'application/json'
             };
             try {
-                const { data } = await axios.put("https://sayan-translator-backend.onrender.com/auth/users/update"
+                const { data } = await axios.put(process.env.REACT_APP_BACKEND_URL + "/auth/users/update"
                     ,
                     {
                         name,

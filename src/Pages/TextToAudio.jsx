@@ -8,7 +8,7 @@ import { DownloadLogo, RetryLogo } from '../Image'
 
 export const TextToAudio = () => {
 
-    const url = "http://127.0.0.1:8000"
+    const url = process.env.REACT_APP_FASTAPI_URL
     const [initial_lang, setInitial_lang] = useState("en")
     const [final_lang, setFinal_lang] = useState("bn")
     const [initial_text, setInitial_text] = useState("")

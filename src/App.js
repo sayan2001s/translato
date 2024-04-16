@@ -1,16 +1,13 @@
 import './App.css';
 import { Home } from './Pages/Home';
 
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { MainNav } from './Components/MainNav';
 import { TextToText } from './Pages/TextToText';
 import { TextToAudio } from './Pages/TextToAudio';
 import { AudioToText } from './Pages/AudioToText';
 import { AudioToAudio } from './Pages/AudioToAudio';
-import Login from './Pages/Login';
 import { Toaster } from 'react-hot-toast';
-import { useUserStore } from './store/user-store';
 import AuthProvider from './Components/AuthProvider';
 import { Nav } from './Components/Nav';
 import "./mediaqueries.css"

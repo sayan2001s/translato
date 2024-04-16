@@ -8,7 +8,7 @@ export const useUserStore = create((set) => ({
         toast.loading("Fetching user...");
         try {
             const { data } = await axios.get(
-                "https://sayan-translator-backend.onrender.com/auth/users/profile",
+                process.env.REACT_APP_BACKEND_URL + "/auth/users/profile",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

@@ -11,7 +11,6 @@ function Signup({ isOpen, onClose }) {
     const [confirmPassword, setConfirmPassword] = useState('');
 
     const processSignup = async () => {
-        const url = "https://sayan-translator-backend.onrender.com"
         toast.loading('Signing up...');
         if (name === '' || email === '' || password === '') {
             toast.error('Name, email and password are required');
@@ -22,7 +21,8 @@ function Signup({ isOpen, onClose }) {
             return;
         }
         try {
-            const { data } = await axios.post(url + '/auth/users/register',
+            console.log(process.env.REACT_APP_BACKEND_URL + '/auth/users/register');
+            const { data } = await axios.post(process.env.REACT_APP_BACKEND_URL + '/auth/users/register',
                 {
                     name,
                     email,
